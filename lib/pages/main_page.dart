@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:manage_money/pages/category_page.dart';
 import 'package:manage_money/pages/home_page.dart';
+import 'package:manage_money/pages/transaction_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -43,9 +44,15 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
       floatingActionButton: Visibility(
-        visible: (currentIndex == 0) ? true : false,
+        visible: currentIndex == 0,
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => TransactionPage()))
+                .then((value) {
+              setState(() {});
+            });
+          },
           backgroundColor: Colors.blue,
           child: const Icon(Icons.add),
         ),
