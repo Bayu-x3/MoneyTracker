@@ -187,11 +187,11 @@ class _HomePageState extends State<HomePage> {
                   Icon(Icons.edit)
                 ],),
                 title: Text("Rp 20.000"),
-                subtitle: Text("Gaji BUlanan"),
+                subtitle: Text("Gaji Bulanan"),
                 leading:  
                 Container(
                   child: 
-                   Icon(Icons.upload, color: Colors.green,),
+                   Icon(Icons.download, color: Colors.green,),
                     decoration: BoxDecoration(color: Colors.white,
                     borderRadius: BorderRadius.circular(8)),
                   ),
